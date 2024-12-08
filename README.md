@@ -95,9 +95,3 @@ unilink_student_information_system/
 ## License
 
 This project is licensed under the terms of the MIT License.
-
-## Links
-
-- [Documentation](#)
-- [Bug Report](#)
-- [Feature Request](#)
