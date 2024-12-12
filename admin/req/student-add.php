@@ -21,6 +21,7 @@ if (isset($_POST['fname']) &&
     isset($_POST['intake']) &&
     isset($_POST['department']) &&
     isset($_POST['semester']) &&
+    isset($_POST['year']) &&
     isset($_POST['lrn'])) {
     
     include "../../DB_connection.php";
@@ -42,9 +43,9 @@ if (isset($_POST['fname']) &&
     $department = $_POST['department'];
     $semester = $_POST['semester'];
     $lrn = $_POST['lrn'];
-    $year = date('Y');
+    $year = $_POST['year'];
 
-    $data = 'lrn='.$lrn.'&fname='.$fname.'&lname='.$lname.'&uname='.$uname.'&section='.$section.'&address='.$address.'&gender='.$gender.'&email='.$email_address.'&pfn='.$parent_fname.'&pln='.$parent_lname.'&ppn='.$parent_phone_number;
+    $data = 'lrn='.$lrn.'&fname='.$fname.'&lname='.$lname.'&uname='.$uname.'&section='.$section.'&address='.$address.'&gender='.$gender.'&email='.$email_address.'&pfn='.$parent_fname.'&pln='.$parent_lname.'&ppn='.$parent_phone_number.'&year='.$year;
 
     if (empty($fname)) {
         $em  = "First name is required";
@@ -104,6 +105,10 @@ if (isset($_POST['fname']) &&
         exit;
     }else if (strlen($lrn) != 12 || !is_numeric($lrn)) {
         $em  = "LRN must be exactly 12 digits";
+        header("Location: ../student-add.php?error=$em&$data");
+        exit;
+    }else if (empty($year)) {
+        $em  = "Year is required";
         header("Location: ../student-add.php?error=$em&$data");
         exit;
     }else {

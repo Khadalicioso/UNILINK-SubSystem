@@ -163,6 +163,17 @@ if (isset($_SESSION['admin_id']) && isset($_SESSION['role'])) {
                         </h3>
                     </div>
                     <div class="card-body">
+                        <?php if (isset($_GET['error'])) { ?>
+                            <div class="alert alert-danger" role="alert">
+                                <?=$_GET['error']?>
+                            </div>
+                        <?php } ?>
+                        
+                        <?php if (isset($_GET['success'])) { ?>
+                            <div class="alert alert-success" role="alert">
+                                <?=$_GET['success']?>
+                            </div>
+                        <?php } ?>
                         <form method="post" action="req/student-add.php">
                             <div class="mb-3">
                                 <label class="form-label">LRN</label>
@@ -300,19 +311,19 @@ if (isset($_SESSION['admin_id']) && isset($_SESSION['role'])) {
 
                             <div class="row">
                                 <div class="col-md-6 mb-3">
-                                    <label class="form-label">Strand</label>
-                                    <select class="form-control" name="strand">
-                                        <option>ICT</option>
-                                        <option>ABM</option>
-                                        <option>STEM</option>
-                                        <option>HUMSS</option>
+                                    <label class="form-label">Department</label>
+                                    <select class="form-control" name="department">
+                                        <option value="ICT">ICT</option>
+                                        <option value="ABM">ABM</option>
+                                        <option value="STEM">STEM</option>
+                                        <option value="HUMSS">HUMSS</option>
                                     </select>
                                 </div>
                                 <div class="col-md-6 mb-3">
-                                    <label class="form-label">Semester</label>
-                                    <select class="form-control" name="sem">
-                                        <option>1st Quarter</option>
-                                        <option>2nd Quarter</option>
+                                    <label class="form-label">Quarter</label>
+                                    <select class="form-control" name="semester">
+                                        <option value="1st Quarter">1st Quarter</option>
+                                        <option value="2nd Quarter">2nd Quarter</option>
                                     </select>
                                 </div>
                             </div>
@@ -321,8 +332,8 @@ if (isset($_SESSION['admin_id']) && isset($_SESSION['role'])) {
                                 <div class="col-md-4 mb-3">
                                     <label class="form-label">Year</label>
                                     <select class="form-control" name="year">
-                                        <option>2024</option>
-                                        <option>2025</option>
+                                        <option value="2024">2024</option>
+                                        <option value="2025">2025</option>
                                     </select>
                                 </div>
                                 <div class="col-md-4 mb-3">
@@ -335,7 +346,7 @@ if (isset($_SESSION['admin_id']) && isset($_SESSION['role'])) {
                                 </div>
                                 <div class="col-md-4 mb-3">
                                     <label class="form-label">Section</label>
-                                    <select class="form-control" name="sec">
+                                    <select class="form-control" name="section">
                                         <?php for ($int = 1; $int <= 10; $int++) { ?>
                                             <option value="<?= $int ?>"><?= $int ?></option>
                                         <?php } ?>
