@@ -1,17 +1,37 @@
-# UNILINK - Student Information System
+# UNILINK - Student Information System and Course Scheduling
 
-A modern and efficient subsystem of a larger academic platform, designed to streamline student information management and administrative processes.
+![Build Status](https://img.shields.io/badge/build-passing-brightgreen) ![License](https://img.shields.io/badge/license-MIT-blue) ![Version](https://img.shields.io/badge/version-1.0.0-orange)
+
+A subsystem of the UNILINK: Academic Community Web Application, designed to streamline student information management and enhance administrative processes.
 
 ![UNILINK Logo](unilink_logo.png)
+
+## Project Overview
+
+The UNILINK: Academic Community Web Application is an interactive, web-based platform designed specifically for academic institutions. Its primary goal is to enhance the management of student information, streamline course scheduling, and facilitate accurate grade viewing. Acting as a comprehensive Student Information System (SIS), UNILINK unites essential academic management tasks into a single, integrated platform.
+
+This system offers significant improvements in operational efficiency, allowing administrative staff to reduce manual tasks and focus on core academic responsibilities. For students, it ensures accessibility and transparency in accessing academic records, schedules, and performance updates. The platform is built with a user-friendly interface, making it easy for students to interact with the system and stay informed about their academic progress.
+
+## Table of Contents
+
+- [Features](#features)
+- [Tech Stack](#tech-stack)
+- [Prerequisites](#prerequisites)
+- [Installation](#installation)
+- [Security](#security)
+- [User Roles](#user-roles)
+- [License](#license)
 
 ## Features
 
 - **Secure Authentication System**
+
   - Role-based access control (Admin/Student)
   - Encrypted password protection
   - Session management
 
 - **Student Portal**
+
   - Personal information management
   - Academic record viewing
   - Course registration
@@ -26,6 +46,7 @@ A modern and efficient subsystem of a larger academic platform, designed to stre
 ## Tech Stack
 
 - **Frontend**
+
   - HTML5
   - CSS3 (Bootstrap 5.2.0)
   - JavaScript
@@ -45,6 +66,7 @@ A modern and efficient subsystem of a larger academic platform, designed to stre
 ## Installation
 
 1. Clone the repository:
+
    ```bash
    git clone https://github.com/Khadalicioso/unilink_student_information_system.git
    ```
@@ -52,10 +74,12 @@ A modern and efficient subsystem of a larger academic platform, designed to stre
 2. Configure your web server to point to the project directory
 
 3. Import the database:
+
    - Create a new MySQL database
    - Import the SQL file from the `data` directory
 
 4. Configure database connection:
+
    - Update the credentials in `DB_connection.php`
 
 5. Access the system through your web browser
@@ -67,22 +91,10 @@ A modern and efficient subsystem of a larger academic platform, designed to stre
 - Session-based authentication
 - Input validation and sanitization
 
-## Project Structure
-
-```
-unilink_student_information_system/
-├── admin/           # Administrative interface
-├── Student/         # Student portal
-├── css/            # Stylesheets
-├── js/             # JavaScript files
-├── inc/            # Include files
-├── req/            # Request handlers
-└── data/           # Database files
-```
-
 ## User Roles
 
 1. **Administrator**
+
    - Full system access
    - User management
    - System configuration
@@ -94,4 +106,4 @@ unilink_student_information_system/
 
 ## License
 
-This project is licensed under the terms of the MIT License.
+This project is licensed under the terms of the [MIT License](https://opensource.org/licenses/MIT).
