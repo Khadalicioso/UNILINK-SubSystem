@@ -63,27 +63,6 @@ This system offers significant improvements in operational efficiency, allowing 
 - Web server (Apache/Nginx)
 - Modern web browser
 
-## Installation
-
-1. Clone the repository:
-
-   ```bash
-   git clone https://github.com/Khadalicioso/unilink_student_information_system.git
-   ```
-
-2. Configure your web server to point to the project directory
-
-3. Import the database:
-
-   - Create a new MySQL database
-   - Import the SQL file from the `data` directory
-
-4. Configure database connection:
-
-   - Update the credentials in `DB_connection.php`
-
-5. Access the system through your web browser
-
 ## Security
 
 - Implements secure password hashing
