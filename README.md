@@ -1,7 +1,5 @@
 # UNILINK - Student Information System and Course Scheduling
 
-![Build Status](https://img.shields.io/badge/build-passing-brightgreen) ![License](https://img.shields.io/badge/license-MIT-blue) ![Version](https://img.shields.io/badge/version-1.0.0-orange)
-
 A subsystem of the UNILINK: Academic Community Web Application, designed to streamline student information management and enhance administrative processes.
 
 ![UNILINK Logo](unilink_logo.png)
@@ -17,7 +15,6 @@ This system offers significant improvements in operational efficiency, allowing 
 - [Features](#features)
 - [Tech Stack](#tech-stack)
 - [Prerequisites](#prerequisites)
-- [Installation](#installation)
 - [Security](#security)
 - [User Roles](#user-roles)
 - [License](#license)
